@@ -1,7 +1,10 @@
 from fastapi import FastAPI
 from fastapi.staticfiles import StaticFiles
+from database import engine, Base
+
+# Создаём таблицы
+Base.metadata.create_all(bind=engine)
 
 app = FastAPI()
 
-# Монтируем статику (ваш фронт)
-app.mount("/", StaticFiles(directory="app/static", html=True), name="static")
+app.mount("/", StaticFiles(directory="static", html=True), name="static")
