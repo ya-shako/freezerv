@@ -1,1 +1,46 @@
-/data
+# База данных
+data/
+*.db
+*.sqlite
+*.sqlite3
+
+# Сертификаты
+*.pem
+*.key
+*.crt
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+.venv/
+ENV/
+.env
+
+# Docker
+*.log
+docker-compose.override.yml
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# Логи
+*.log
+logs/
+
+# Временные файлы
+*.tmp
+*.temp
+
+# Настройки (если есть секреты)
+.env.local
+.env.*.local
